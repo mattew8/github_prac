@@ -1,0 +1,12 @@
+[uwsgi]
+chdir=/home/ubuntu/HangYo/hangyo
+module=config.wsgi:application
+master=True
+pidfile=/tmp/project-master.pid
+vacuum=True
+max-requests=5000
+daemonize=/home/ubuntu/HangYo/hangyo/django.log
+home=/home/ubuntu/HangYo/hangyo/venv
+virtualenv=/home/ubuntu/HangYo/hangyo/venv
+socket=/home/ubuntu/HangYo/hangyo/uwsgi.sock
+chmod-socket=666
